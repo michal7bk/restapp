@@ -1,12 +1,10 @@
 package pl.bak.film;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pl.bak.film.model.Movie;
 
 import java.util.List;
-import java.util.Map;
 
 
 @RestController
@@ -28,11 +26,13 @@ public class MovieController {
     @GetMapping("/{id}")
     public Movie getOneMovie(@PathVariable("id") long movieId) {
         return movieService.findById(movieId);
+
     }
 
     @GetMapping
     public List<Movie> getAllMovies() {
         return movieService.findAll();
     }
+
 
 }

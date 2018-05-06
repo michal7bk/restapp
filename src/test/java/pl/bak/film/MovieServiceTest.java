@@ -5,9 +5,6 @@ import org.junit.Test;
 import org.mockito.Mock;
 import pl.bak.film.model.Movie;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 import static org.mockito.ArgumentMatchers.eq;
 
 import static org.mockito.BDDMockito.given;
@@ -18,6 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class MovieServiceTest {
 
     private MovieService movieService;
+
 
     @Mock
     private MovieRepository movieRepository;
@@ -52,6 +50,8 @@ public class MovieServiceTest {
         //then
         assertThat(resultMovie).isEqualTo(newMovie);
     }
+
+
 
 
 
